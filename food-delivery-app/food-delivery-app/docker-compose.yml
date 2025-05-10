@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  eureka-server:
+    build: ./eureka server/demo
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+
+  food-delivery-app:
+    build: ./bd-api/demo
+    container_name: todo-app
+    ports:
+      - "8081:8080"
+    depends_on:
+      - eureka-server
+
+
+  food-delivery-app-2:
+    build: ./bd-api/demo
+    container_name: todo-app-2
+    ports:
+      - "5050:8080"
+    depends_on:
+      - eureka-server

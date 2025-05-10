@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Menu - Food Delivery App</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #343a40;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+    }
+
+    li {
+      background-color: #ffffff;
+      padding: 15px 25px;
+      margin: 10px 0;
+      width: 250px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font-size: 18px;
+      color: #333;
+    }
+
+    a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    a:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+<h1 th:text="${message}">Our Menu</h1>
+<ul>
+  <li>Pizza</li>
+  <li>Burger</li>
+  <li>Pasta</li>
+</ul>
+<a href="/order">Place an Order</a>
+</body>
+</html>

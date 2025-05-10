@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Food Delivery App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #343a40;
+            margin-bottom: 40px;
+        }
+
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 24px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<h1 th:text="${message}">Welcome to Food Delivery App</h1>
+<div>
+    <a href="/menu">View Menu</a>
+    <a href="/order">Place Order</a>
+</div>
+</body>
+</html>
